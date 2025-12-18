@@ -3,7 +3,7 @@
   "displayName": "Commit Percentage",
   "description": "Shows percentage of codebase changed by staged commits",
   "version": "0.0.1",
-  "publisher": "Darsh Jain",
+  "publisher": "sparky0520",
   "repository": {
     "type": "git",
     "url": "https://github.com/sparky0520/commit-percentage"
