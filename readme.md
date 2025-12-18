@@ -1,4 +1,4 @@
-# Percentage Changes
+# Commit Percentage
 
 This is a vs code extension that will tell you the percentage changes (deletion and additons are the same here) of your staged files compared to the total repository lines of code.
 

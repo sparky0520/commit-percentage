@@ -1,7 +1,14 @@
 {
   "name": "commit-percentage",
   "displayName": "Commit Percentage",
+  "description": "Shows percentage of codebase changed by staged commits",
   "version": "0.0.1",
+  "publisher": "Darsh Jain",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sparky0520/commit-percentage"
+  },
+  "license": "GPL-3.0-or-later",
   "engines": {
     "vscode": "^1.80.0"
   },
