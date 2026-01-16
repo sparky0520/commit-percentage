@@ -1,6 +1,7 @@
 {
   "name": "commit-percentage",
   "displayName": "Commit Percentage",
+  "icon": "images/icon.png",
   "description": "Shows percentage of codebase changed by staged commits",
   "version": "0.0.1",
   "publisher": "sparky0520",
