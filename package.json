@@ -3,7 +3,7 @@
   "displayName": "Commit Percentage",
   "icon": "images/icon.png",
   "description": "Shows percentage of codebase changed by staged commits",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "publisher": "sparky0520",
   "repository": {
     "type": "git",
