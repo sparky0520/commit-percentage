@@ -16,13 +16,10 @@ import * as fs from "fs";
 let statusBarItem: vscode.StatusBarItem;
 
 export function activate(context: vscode.ExtensionContext) {
-  console.log("Commit Percentage extension activated!");
-
   statusBarItem = vscode.window.createStatusBarItem(
     vscode.StatusBarAlignment.Left,
     100
   );
-  console.log("Status bar item created");
   statusBarItem.command = "commitPercentage.refresh";
   context.subscriptions.push(statusBarItem);
 
@@ -49,7 +46,6 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 function updatePercentage(repo: any) {
-  console.log("updatePercentage called");
   try {
     const repoPath = repo.rootUri.fsPath;
 
@@ -59,17 +55,13 @@ function updatePercentage(repo: any) {
     // Get staged lines count
     const stagedLines = getStagedLines(repoPath);
 
-    console.log(`Total: ${totalLines}, Staged: ${stagedLines}`);
-
     if (totalLines > 0 && stagedLines > 0) {
       const percentage = ((stagedLines / totalLines) * 100).toFixed(2);
       statusBarItem.text = `$(git-commit) ${percentage}% of codebase`;
       statusBarItem.tooltip = `${stagedLines} lines staged out of ${totalLines} total lines`;
       statusBarItem.show();
-      console.log(`Status bar shown: ${percentage}%`);
     } else {
       statusBarItem.hide();
-      console.log("Status bar hidden (no staged changes or total lines is 0)");
     }
   } catch (error) {
     console.error("Error calculating percentage:", error);
@@ -94,11 +86,9 @@ function getTotalLines(repoPath: string): number {
         totalLines += content.split("\n").length;
       } catch (err) {
         // Skip files that can't be read (binary, deleted, etc.)
-        console.log(`Skipping file: ${file}`);
       }
     }
 
-    console.log(`Total lines: ${totalLines}`);
     return totalLines;
   } catch (error) {
     console.error("Error getting total lines:", error);
@@ -130,9 +120,6 @@ function getStagedLines(repoPath: string): number {
     // Total lines changed (additions + deletions)
     const totalChanged = addedLines + deletedLines;
 
-    console.log(
-      `Staged - Added: ${addedLines}, Deleted: ${deletedLines}, Total: ${totalChanged}`
-    );
     return totalChanged;
   } catch (error) {
     console.error("Error getting staged lines:", error);
