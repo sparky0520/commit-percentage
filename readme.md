@@ -29,4 +29,4 @@ The percentage is computed from staged changes only, so you do not need to commi
 
 #### ⭐ Star the [Repository](https://github.com/sparky0520/commit-percentage)
 
-#### ☕ Buy me a [coffee](https://www.buymeacoffee.com/sparky0520)
+#### ☕ Buy me a [coffee](https://buymeacoffee.com/darshjain0w)
